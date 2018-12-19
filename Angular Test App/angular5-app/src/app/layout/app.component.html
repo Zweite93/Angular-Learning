@@ -1,29 +1,11 @@
-<div *ngIf="authentication">
-
-    <app-head></app-head>
-  
-    <button type="button" mat-button (click)="drawer.toggle()">
-  
-      Menu
-  
-    </button>
-  
-    <mat-drawer-container class="example-container" autosize>
-  
-      <mat-drawer #drawer class="example-sidenav" mode="side">
-  
-        <app-left-panel></app-left-panel>
-  
-      </mat-drawer>
-  
-      <div>
-  
-        <router-outlet></router-outlet>
-  
+<!-- main app container -->
+<div class="jumbotron">
+  <div class="container">
+      <div class="row">
+          <div class="col-sm-6 offset-sm-3">
+              <alert></alert>
+              <router-outlet></router-outlet>
+          </div>
       </div>
-  
-    </mat-drawer-container>
-  
   </div>
-  
-  <div *ngIf="!authentication"><app-login></app-login></div>
+</div>
